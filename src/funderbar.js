@@ -234,9 +234,9 @@ _.falsyOrTruthy = function(a){
     _.objectCreationBracket = (a,b,c) =>{
       //Code Goes Below
       let anObject = {};
-      anObject[`${a}`] = 'Tommy';
-      anObject[String(b)] = 'Oliver';
-      anObject[String(c)] = 'Dragon';
+      anObject['firstName'] = a;
+      anObject['lastName'] = b;
+      anObject['zord'] = c;
       return anObject;
     }
 
@@ -244,12 +244,16 @@ _.falsyOrTruthy = function(a){
 
     _.objectCreationDot = (a,b,c) =>{
       //Code Goes Below
-
+      let aDotObject = {}
+      aDotObject.firstName = a;
+      aDotObject.lastName = b;
+      aDotObject.zord = c;
+      return aDotObject;
     }
 
     _.objectValue = (a,b) => {
       //Code Goes Below
-      
+      return a[b];
     }
     
 
@@ -261,7 +265,13 @@ _.falsyOrTruthy = function(a){
     //Loop through the given array and return the total sum of all the numbers in the array. 
     _.forOf = (a) => {
       //Code Goes Below
-      
+      let sumNumDumDum = 0;
+      for(let i of a) {
+        if (typeof i === 'number') {
+          sumNumDumDum += i;
+        }
+      }
+      return sumNumDumDum;
     }
 
     //Loop through the given object and return an array of keys from the object. 
@@ -269,13 +279,21 @@ _.falsyOrTruthy = function(a){
     //example array.push(value)
     _.forInKeys = (a) =>{
       //Code Goes Below
-      
+      let barnOfKeys = [];
+      for(let skeleKeys in a) {
+        barnOfKeys.push(skeleKeys);
+      }
+      return barnOfKeys;
     }
 
     //Loop through the given object and return an array of values from the object. 
     //This is similar to the above function but needs a little digging to get the value. 
     _.forInValues = (a) =>{
       //Code Goes Below
-      
+      let myCollectionOfProperties = []
+      for(let keyNapper in a) {
+        myCollectionOfProperties.push(a[keyNapper]);
+      }
+      return myCollectionOfProperties;
     }
 }());
