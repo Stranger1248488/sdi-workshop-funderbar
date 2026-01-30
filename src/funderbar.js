@@ -233,7 +233,11 @@ _.falsyOrTruthy = function(a){
 
     _.objectCreationBracket = (a,b,c) =>{
       //Code Goes Below
-
+      let anObject = {};
+      anObject[`${a}`] = 'Tommy';
+      anObject[String(b)] = 'Oliver';
+      anObject[String(c)] = 'Dragon';
+      return anObject;
     }
 
     //Below you will be building a function that creates an object using dot notation (.). Within the function create and return an object. 

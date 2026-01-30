@@ -20,16 +20,16 @@
       }
       it('TEST ONLY: Access object values using bracket notation ', function() {
         //Use bracket notation for the FILL_ME_IN portion. 
-        expect(FILL_ME_IN).to.eql('Tommy');
-        expect(FILL_ME_IN).to.eql('Oliver');
-        expect(FILL_ME_IN).to.eql(16);
+        expect(obj['firstName']).to.eql('Tommy');
+        expect(obj['lastName']).to.eql('Oliver');
+        expect(obj['age']).to.eql(16);
       });
 
       it('TEST ONLY: Access object values using dot notation ', function() {
         //Use bracket notation for the FILL_ME_IN portion. 
-        expect(FILL_ME_IN).to.eql('Dragon');
-        expect(FILL_ME_IN).to.eql('Green');
-        expect(FILL_ME_IN).to.eql(true);
+        expect(obj.zord).to.eql('Dragon');
+        expect(obj.suit).to.eql('Green');
+        expect(obj.inHighSchool).to.eql(true);
       });
 
     });
@@ -42,9 +42,9 @@
       let obj = _.objectCreationBracket(firstName,lastName,zord);
       it('Create an object using bracket notation', function() {
         //Use bracket notation for the FILL_ME_IN portion. 
-        expect(obj[FILL_ME_IN]).to.eql('Tommy');
-        expect(obj[FILL_ME_IN]).to.eql('Oliver');
-        expect(obj[FILL_ME_IN]).to.eql('Dragon');
+        expect(obj['firstName']).to.eql('Tommy');
+        expect(obj['lastName']).to.eql('Oliver');
+        expect(obj['zord']).to.eql('Dragon');
       });
 
     });
